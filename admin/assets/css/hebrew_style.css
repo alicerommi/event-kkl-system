@@ -1,0 +1,11 @@
+.alert,.footer {
+	direction: rtl !important;
+}
+
+form#updateAdminUpdate .form-group input{
+	direction: rtl !important;
+}
+
+form#updateAdminUpdate .form-group label{
+	direction: rtl !important;
+}

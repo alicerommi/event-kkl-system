@@ -10,7 +10,7 @@
   z-index: 999;
 }
 .topbar .topbar-left {
-  background: #677eff;
+  background: grey;
   float: left;
   height: 70px;
   position: relative;
@@ -36,7 +36,7 @@
   margin-right: 5px;
 }
 .navbar-default {
-      background-color: #677eff;
+      background-color: grey;
   border-radius: 0px;
   border: none;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);

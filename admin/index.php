@@ -1,6 +1,7 @@
 <?php
     include 'includes/header.php';
-?>                 
+?>
+
             <div class="content-page">
                 <!-- Start content -->
                 <div class="content">
@@ -8,25 +9,11 @@
                         <div class="row">
                             <?php
                             
-                                // $city_query = mysqli_query($conn,"SELECT * FROM `cities`");
-                                // while($main_row = mysqli_fetch_assoc($city_query)){
-                                //         $city_name = $main_row['city_name']; 
-                                //         $city_id = $main_row['city_id'];
-                                //         $count_query = mysqli_query($conn,"select sum(other_peoples_count) as other_people_tickets from ticket_booking where city_id = $city_id");
-                                //         $count_query2 = mysqli_query($conn,"select * from ticket_booking where city_id=$city_id");
-                                //         $row = mysqli_fetch_assoc($count_query);
-                                //         $counter = $row['other_people_tickets']+mysqli_num_rows($count_query2); 
-                                //         if ($counter>0)
-                                               
-                                //                 echo '<div class="col-sm-6 col-lg-3">
-                                //                                         <div class="mini-stat clearfix bx-shadow bg-white">
-                                //                                             <div class="mini-stat-info text-right text-dark">
-                                //                                              <span class="counter text-dark">'.$counter.'</span>
-                                //                                                     <a href="all_tickets.php?city_id='.$city_id.'">Total Tickets Count for '.$city_name.'</a>
-                                //                                             </div>
-                                //                                         </div>
-                                //                 </div>'; 
-                            //}//end while loop here
+                               
+
+                            echo '<div class="col-md-12" style="direction:rtl;">';
+
+                            echo '<div class="alert alert-info text-center" style="font-size:20px;"> <strong>Total Registerations Stats</strong></div>';
 
                             $query = mysqli_query($conn,"select * from booking_track order by record_datetime desc");
                             $counter = mysqli_num_rows($query);
@@ -59,6 +46,59 @@
                                                                             </div>
                                                                         </div></div>';
 
+                        echo '</div>';
+
+
+                        echo '<div class="col-md-12" style="direction:rtl;">';
+
+                            echo '<div class="alert alert-success text-center" style="font-size:20px;"><strong>Total Events Stats</strong></div>';
+
+
+
+                            $events_query = mysqli_query($conn,"select * from events");
+                            $num = 0;
+                            echo '<table class="table table-bordered text-center" style="    background: white; " id="info_table">
+
+                                    <thead>
+                                        <th>#</th>
+                                        <th>Event Name</th>
+                                        <th>סה”כ נרשמים</th>
+                                        <th>סה”כ נרשמים ששלחו תשובה</th>
+                                        <th>Page Link</th>
+                                    </thead> <tbody>';
+                            while($event_row = mysqli_fetch_array($events_query)){
+                                $event_id = $event_row['event_id'];
+                                $event_name = $event_row['event_name'];
+                                $num +=1;
+                                $query1_ = mysqli_query($conn,"select count(*) as total_count_without_ans from booking_track where answer is NULL and event_id=$event_id");
+                                $query2_ = mysqli_query($conn,"select count(*) as total_count_with_ans from booking_track where answer is not NULL and event_id=$event_id");
+                                $query1_row = mysqli_fetch_assoc($query1_);
+                                $query2_row = mysqli_fetch_assoc($query2_);
+                                $view_events_ = "<a href='registerations_records.php?event_id=".$event_id."' title='View Registerations' class='btn btn-purple'><i class='fa fa-list'></i></a> ";
+
+                                echo '
+
+
+                                   
+                                        <tr>
+                                            <td>'.$num.'</td>
+                                            <td>'.$event_name.'</td>
+                                            <td class="counter">'.$query1_row["total_count_without_ans"].'</td>
+                                           <td class="counter">'.$query2_row["total_count_with_ans"].'</td>
+                                           <td>'.$view_events_.'</td>
+                                        </tr>
+                                    ';
+
+
+
+                            }//end while loop here
+                            echo '</tbody>
+                                </table>';
+
+
+
+
+                        echo '</div>';
 
                             ?>
                     </div> 

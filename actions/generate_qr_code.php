@@ -52,9 +52,9 @@ function qrcode_generator($text, $base_path = '../images/') {
 }
 
 if(isset($_GET['generate_qrcode'])){
+    $e = $_GET['e'];
 	$id = time();
-	$site = "KKL-site-2".uniqid();
-	$page = $domain_name."registeration.php?token=$id&site=$site";
+	$page = $domain_name."registeration.php?token=$id&site=$e";
 	echo qrcode_generator($page);
 }// end generate_qrcode
 

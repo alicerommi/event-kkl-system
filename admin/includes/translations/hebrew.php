@@ -82,6 +82,37 @@
 		"Enter the amount of tickets (For Above selected city)"=>"Enter the amount of tickets (For Above selected city)",
 		"Choose City"=>"Choose City",
 
+
+
+		#events.php
+
+		"Add A New Event"=>"Add A New Event",
+		"Event Name"=>"Event Name",
+		"Save"=>'Save',
+		"Events"=>"Events",
+		"QR Code Link"=>"מחולל QR",
+		"Actions"=>"Actions",
+		
+
+
+
+
+		#register_records.php
+		
+
+		"full name"=> "שם מלא",
+		"event name"=> "אירוע,",
+		"residence"=> "מקום מגורים",
+		"phone"=> "סלולרי",
+		"mail" => "מייל",
+		"people count"=> "משתתפים",
+		"reg date time"=> "תאריך רישום",
+		"answer status" =>"סטטוס תשובה", 
+		"Answer Not Submitted" =>"לא נתקבלה",   
+		"Answer Submitted"=>  "נתקבלה ב",
+		"answer" => "תשובה",
+
+
 	);
 
 	function get_hebrew_text($text){

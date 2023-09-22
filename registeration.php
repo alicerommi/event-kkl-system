@@ -107,6 +107,7 @@
               <div class="col-12">
                 <input type="hidden" name="token" value="'.$token.'">
                 <input type="hidden" name="site" value="'.$site.'">
+
                 <input required name="first_name" type="text" class="form-control py-3 fs-4 rounded-0" placeholder="שם פרטי" maxlength="50">
               </div>
               <div class="col-12">
@@ -119,30 +120,27 @@
               </div>
               <div class="col-12">
                
-                <input required  name="phone" type="text" class="form-control py-3 fs-4 rounded-0" placeholder="מספר טלפון" maxlength="50">
+                <input required  name="phone" type="text" class="form-control py-3 fs-4 rounded-0" placeholder="מספר טלפון" maxlength="10">
+              </div>
+
+              <div class="col-12">
+                <input required  name="mail" type="email" class="form-control py-3 fs-4 rounded-0" placeholder="מייל" maxlength="50">
               </div>
         
-        <div class="col-12">
-          <select class="form-control select py-3 fs-4 rounded-0" name="number_of_people"  id="number_of_people" required>
-                  <option value="" selected="" disabled=""><img src="./assets/img/dropdown.png" class="dropdown"/> בחירת כמות משתתפים </option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                  <option value="13">13</option>
-                  <option value="14">14</option>
-                  <option value="15">15</option>
-                  <option value="16">16</option>
-            
-           </select>
+        
+              <div class="col-12">
+                <select class="form-control select py-3 fs-4 rounded-0" name="number_of_people"  id="number_of_people" required>
+                        <option value="" selected="" disabled=""><img src="./assets/img/dropdown.png" class="dropdown"/> בחירת כמות משתתפים </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                       
+                 </select>
               </div>
               <div class="col-12 mb-4">
                 <label for="policy" class="lead mb-2 subheadingtext">
@@ -165,9 +163,11 @@
               </div>
           </form>
         </div>';
+        }else{
+           echo '<div class="alert alert-warning text-center" class="rtl"><strong>על מנת להרשם עליך לגשת לשער הכניסה לקבלת קוד QR</strong></div>';
         }
         }else{
-            echo '<div class="alert alert-warning text-center" class="rtl"><strong>Please scan QR Code again for registeration.</strong></div>';
+            echo '<div class="alert alert-warning text-center" class="rtl"><strong>על מנת להרשם עליך לגשת לשער הכניסה לקבלת קוד QR</strong></div>';
         }
       ?>  
       </section>

@@ -199,6 +199,11 @@
                                 <a href="registerations_records.php" class="waves-effect"><i class="md md-now-widgets"></i><span><?php echo "Guest Registeration";  #echo get_hebrew_text("Booked Tickets"); ?> </span></a>
                             </li>
 
+
+                            <li>
+                                <a href="events.php" class="waves-effect"><i class="md md-event"></i><span><?php echo get_hebrew_text("Events"); ?> </span></a>
+                            </li>
+
                             <!-- <li>
                                 <a href="all_tickets.php" class="waves-effect"><i class="md md-now-widgets"></i><span><?php #echo get_hebrew_text("Booked Tickets"); ?> </span></a>
                             </li>

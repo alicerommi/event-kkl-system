@@ -68,37 +68,22 @@
       <!-- section -->
      <section class=" text-end" id="section4" style="margin: 30px 0">
         <div class="container">
-          
           <div dir="rtl" class=" text-right headingtext" >
 		התעייפתם? חישבו כמה קלנגה התאמץ בימי הנדידה הארוכים דרומה. <br>
         מה נשאר? <br>
 לפתור את חידת אוצר הנדידה בחוברת המסע, ולהעתיק את הפתרון לכאן:
-
           </div>
-
-
 			<form class="rtl mt-2" id = "leaving_form">
-            <div class="row g-4"> 
-                  <!-- <h2 class="text-center headingtext">תשובתך התקבלה בהצלחה </h2>
-                  <h2 class="text-center headingtext">שמחנו לארח אותך </h2> -->
-
-                <div class="col-12" id="leaving_form_messages">
+            <div class="row g-4">
+                <div class="col-12" id="leaving_form_messages"></div>
+                <div class="col-12 fields">
+                    <input class="phoneinput" required type="text" id="phone" name="phone" maxlength="10" placeholder="הזן את המספר הסלולרי שלך לזיהוי " />
+                </div>
+                <div class="col-12 fields" id="ans_box"></div>
                 
-                </div>
-
-                <div class="col-12">
-                  <input class="phoneinput" required type="text" id="phone" name="phone" maxlength="50" placeholder="הזן את המספר הסלולרי שלך לזיהוי " />
-                </div>
-
-                <div class="col-12">
-                      <textarea class="mt-2 w-100 input-form" name="answer" id="answer" required rows="3" maxlength="5000" placeholder="הקלד את תשובתך"></textarea>
-                </div>
-
-                <input type="hidden" name="save_leaving_form" value="1">
-
-                 <div class="text-center pb-4">
+                 <div class="text-center pb-4 fields" id="btn_div" style="display: none;">
                        <button class="btn btn-primary btn-lg w-100 py-3 fs-4 rounded-0" id="leaving_form_submit_btn" type="submit">
-                            לח
+                            שלח
                         </button>        
                 </div>
 				</div>

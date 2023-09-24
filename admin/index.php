@@ -155,7 +155,7 @@
                 },
                 'dataType':'JSON',
                 success:function(data){
-                    if (data['success']!=1){
+                    if (data['success']!https://github.com/alicerommi/event-kkl-system.git=1){
                         Swal.fire({
                           icon: 'error',
                           title: '',

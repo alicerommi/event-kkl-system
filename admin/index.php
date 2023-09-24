@@ -100,6 +100,16 @@
 
                         echo '</div>';
 
+                           echo '<div class="col-md-12 text-center" style="direction:rtl; margin-top:20px">
+                            <div class="form-group">
+                                        <button class="btn btn-danger btn-lg" id ="clear_db"><i class="fa fa-trash"></i> Clear DB</button>
+                            </div></div>
+                           ';
+
+                           
+
+
+
                             ?>
                     </div> 
                 </div> 
@@ -113,6 +123,61 @@
         $('.counter').counterUp({
                     delay: 100,
                     time: 1200
+        });
+
+
+        function showConfirmationDialog() {
+              Swal.fire({
+                title: 'Are you sure?',
+                text: 'This action cannot be undone!',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, do it!',
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  // The user clicked "Yes," perform your operation here
+                  // Example: Delete a record, submit a form, etc.
+                  performOperation();
+                }
+              });
+        }
+
+
+        function performOperation() {
+          // Put your operation code here
+            $.ajax({
+                'method':'POST',
+                'url':'actions/delete.php',
+                'data':{
+                    'clear_db':1
+                },
+                'dataType':'JSON',
+                success:function(data){
+                    if (data['success']!=1){
+                        Swal.fire({
+                          icon: 'error',
+                          title: '',
+                          text: data["msg"],
+                           showConfirmButton: false, // Hide the "OK" button\
+                           timer: 10000, // 10 seconds in milliseconds
+                        });
+                    }else{
+                                 Swal.fire({
+                              icon: 'success',
+                              title: '',
+                              text: data["msg"],
+                               showConfirmButton: false, // Hide the "OK" button
+                               timer: 10000, // 10 seconds in milliseconds
+                          });
+                    }
+                }
+            });
+        }
+
+        $("#clear_db").click(function(){
+            showConfirmationDialog();
         });
     });
 </script>

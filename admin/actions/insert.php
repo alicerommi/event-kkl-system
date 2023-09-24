@@ -17,3 +17,4 @@
 				$_SESSION['msg_e']= $event_name." is already exists in DB.";
 			header("location:../events.php");
 	}#add_event
+?>

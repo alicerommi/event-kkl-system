@@ -58,6 +58,11 @@
         <!-- Plugins css -->
         <link href="assets/plugins/notifications/notification.css" rel="stylesheet">
 
+        <script src="assets/js/sweetalert2.min.js"></script>
+
+        <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+
+
         <!-- Hebrew -->
         <link href="assets/css/hebrew_style.css" rel="stylesheet" type="text/css">
 

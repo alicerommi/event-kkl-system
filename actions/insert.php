@@ -14,16 +14,17 @@
 	        $mail->Host       = 'smtp.gmail.com'; // SMTP server
 	        $mail->SMTPAuth   = true;
 	        $mail->Username   = 'Zaparaton.kkl@gmail.com'; // SMTP username
-	        $mail->Password   = 'Zaparaton2023'; // SMTP password
-	        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption
+	        $mail->Password   = 'tjtyrclnvvmvnnyl'; // SMTP password
+	        $mail->SMTPSecure = 'tls'; // Enable TLS encryption
 	        $mail->Port       = 587; // TCP port to connect to
 
 	        //Recipients
-	        $mail->setFrom($mail->Username, 'Kkl'); // Sender's email and name
+	        $mail->setFrom('Zaparaton.kkl@gmail.com', 'Kkl'); // Sender's email and name
 	        $mail->addAddress($to); // Recipient's email
 
 	        // Content
 	        $mail->isHTML(true);
+	        $mail->CharSet = 'UTF-8';
 	        $mail->Subject = $subject;
 	        $mail->Body    = $message;
 	        $mail->send();

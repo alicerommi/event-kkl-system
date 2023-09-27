@@ -128,9 +128,9 @@ $(document).ready(function() {
     jQuery(".select2").select2({
             width: '100%'
     });
-    // $("#list_of_cities").change(function(){
-    //         let cid = $(this).find(":selected").val();
-    //         location.href="all_tickets.php?city_id="+cid;
-    // });
+
 });
 </script>
+
+
+

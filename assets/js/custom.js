@@ -1,13 +1,40 @@
 $(document).ready(function () {
         // $('#city').select2();
           // for checking confirm box
-          $('#policy_confirm').change(function() {
-              if ($(this).is(':checked')) {
-                $('#action_btn').removeClass('disabled-button');
-              } else {
-               $('#action_btn').addClass('disabled-button');
-              }
-        });
+
+
+            var checkbox1Checked = false;
+            var checkbox2Checked = false;
+
+            // Bind a click event handler to the checkboxes
+            $("#policy_confirm").click(function() {
+                checkbox1Checked = $(this).is(":checked");
+                performActionIfBothChecked();
+            });
+
+            $("#policy_confirm2").click(function() {
+                checkbox2Checked = $(this).is(":checked");
+                performActionIfBothChecked();
+            });
+
+            // Function to perform action if both checkboxes are checked
+            function performActionIfBothChecked() {
+                if (checkbox1Checked && checkbox2Checked) {
+                    // Perform your action here
+                       $('#action_btn').removeClass('disabled-button');
+                }else{
+                    $('#action_btn').addClass('disabled-button');
+                }
+            }
+
+
+        //   $('#policy_confirm').change(function() {
+        //       if ($(this).is(':checked')) 
+        //         $('#action_btn').removeClass('disabled-button');
+        //       else 
+        //        $('#action_btn').addClass('disabled-button');
+
+        // });
       //insert action
         $("#ticket_booking_form").submit(function(e){
           let form_data = $(this).serialize();
@@ -17,7 +44,6 @@ $(document).ready(function () {
             'data': form_data,
             'dataType':'JSON',
             success: function (data) {
-
               if (data['success']==0){
                 Swal.fire({
                   icon: 'error',
@@ -27,7 +53,8 @@ $(document).ready(function () {
                    timer: 10000, // 10 seconds in milliseconds
                 });
               }else{
-                    $('#action_btn').addClass('disabled-button');
+                    //$('#action_btn').addClass('disabled-button');
+                   
                    Swal.fire({
                       icon: 'success',
                       title: '',
@@ -35,11 +62,12 @@ $(document).ready(function () {
                        showConfirmButton: false, // Hide the "OK" button
                        timer: 10000, // 10 seconds in milliseconds
                   });
-                    
-                  $("#ticket_booking_form")[0].reset();
+                 
+                  // $("#ticket_booking_form")[0].reset();
+                    $("#ticket_booking_form").remove();
 
                 }
-
+                
             },
             error: function (xhr, status, error) {
               console.log('Error:', error);

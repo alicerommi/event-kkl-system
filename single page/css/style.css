@@ -1,0 +1,270 @@
+@import url('https://fonts.cdnfonts.com/css/assistant');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;500;700;800&display=swap');
+
+@font-face {
+  font-family:'Assistant', sans-serif;
+  src: url('https://fonts.cdnfonts.com/css/assistant')
+}
+
+@font-face {
+  font-family:'Assistant', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;500;700;800&display=swap')
+}
+
+@font-face {
+  font-family: "Assistant-Light-300";
+  src: url("https://fonts.googleapis.com/css2?family=Assistant:wght@300;500;700;800&display=swap");
+}
+@font-face {
+  font-family: "Assistant-Light-500";
+  src: url("https://fonts.googleapis.com/css2?family=Assistant:wght@300;500;700;800&display=swap");
+}
+@font-face {
+  font-family: "Assistant-Light-700";
+  src: url("https://fonts.googleapis.com/css2?family=Assistant:wght@300;500;700;800&display=swap");
+}
+
+@font-face {
+  font-family: "Assistant-Light-800";
+  src: url("https://fonts.googleapis.com/css2?family=Assistant:wght@300;500;700;800&display=swap");
+}
+
+* {
+  font-family: 'Assistant', sans-serif;
+	src: url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;500;700;800&display=swap');
+}
+
+.headingtext{ font-family: "Assistant"; font-size: 45px; font-weight: 700}
+.subheadingtext{ font-family: "Assistant"; font-size: 17px;font-weight: 500}
+.smallheadingtext{ font-family: "Assistant"; font-size: 14px;font-weight: 300}
+
+.bg-primary {
+  background-color: white !important;
+}
+.website{ background: url("../img/bg.jpg") no-repeat; background-size: 100%}
+.top-text{ text-align: center; color: white; margin-top: 90px}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #000000;
+  color: white;
+}
+
+::placeholder{color:#ffffff;}
+.form-control{ background: black; color: white;}
+.form-control:active{ background: black; color: white;}
+.form-control:checked{ background: black; color: white;}
+.form-control:enabled{ background: black; color: white;}
+.form-control:focus{ background: black; color: white;}
+.form-control:hover{ background: black; color: white;}
+.form-control:visited{ background: black; color: white;}
+
+body,
+html {
+  overflow-x: hidden;
+  font-family: 'Assistant', sans-serif;
+}
+.text-blue {
+  color: #0773ba !important;
+}
+.section-3 img {
+  border: 5px solid #0773ba;
+}
+.z-200 {
+  z-index: 200;
+}
+
+.header,
+footer {
+  
+  z-index: 1000 !important;
+}
+
+/* .header a {
+  color: white !important;
+} */
+.logo {
+  width: 50px;
+  border-radius: 0px;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.section-4 {
+  padding: 120px 0 30px 0;
+}
+iframe {
+  width: 100%;
+  height: 500px;
+}
+
+.section-5 {
+  padding: 120px 0 30px 0;
+}
+
+.section-6 {
+  padding: 120px 0 30px 0;
+}
+
+.f-logo {
+  width: 100px;
+}
+
+span.select2-selection.select2-selection--single {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+  border: unset;
+  font-size: 24px;
+  direction: rtl;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  height: 26px;
+  position: absolute;
+  top: 24px;
+  right: 9%;
+  width: 20px;
+display: none;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered{padding-right: 12px}
+
+.select {
+  /* background-image: url("../img/dropdown.png");*/
+  background-size: 7px;
+  background-position: 99.4%;
+  background-repeat: no-repeat;
+  padding-right: 12px;
+}
+
+span.select2.select2-container.select2-container--default {
+  max-width: 100%;
+}
+.f-logo {
+  width: 150px;
+}
+
+li.select2-results__option {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+.fs-12 {
+  font-size: 9px;
+}
+.fa-circle {
+  position: relative;
+  bottom: 4px;
+}
+
+ /* ================================================= */
+
+
+
+
+.input-form{width: 100%;    padding: 20px 10px;    border: 1px solid #e1e1e1; text-align: right}
+
+ /* ================================================= */
+
+@media screen and (max-width: 1440px) {
+
+}
+@media screen and (max-width: 1400px) {
+.headingtext{ font-family: "Assistant"; font-size: 45px; font-weight: 700}
+.subheadingtext{ font-family: "Assistant"; font-size: 17px;font-weight: 500}
+.smallheadingtext{ font-family: "Assistant"; font-size: 14px;font-weight: 300}
+	
+}
+
+@media screen and (max-width: 1024px) {
+	
+	.gradient-bg {margin: 54px; width: 100%}
+}
+
+@media screen and (max-width: 992px) {
+
+	
+}
+
+
+@media screen and (max-width: 768px) {
+
+.headingtext{ font-family: "Assistant"; font-size: 35px; font-weight: 700}
+.subheadingtext{ font-family: "Assistant"; font-size: 17px;font-weight: 500}
+.smallheadingtext{ font-family: "Assistant"; font-size: 13px;font-weight: 300}
+	.gradient-bg {margin: 0px; width: 100%}
+}
+
+@media screen and (max-width: 540px) {
+	
+	.gradient-bg {margin: 0px; width: 100%}
+}
+
+@media screen and (max-width: 425px) {
+	.banner-content {
+            /*position: absolute;
+            z-index: 999;
+            bottom: 30px;
+            left: 14%;
+            transform: translate(-30px, 0);*/
+            width: 80%;
+            text-align: right;
+            
+            color: black;
+            line-height: 1.5;
+        }
+
+        .img-content img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .overlay {
+           /* position: absolute;
+            top: 0;
+            left: 0;*/
+            width: 100%;
+            opacity: .8;
+            z-index: 999;
+            height: 100%;
+        }
+.gradient-bg {
+height: auto;
+    background-color: #8080807a;
+    background-image: linear-gradient(to right, #999696 , #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+    Opacity: 100%;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #EAEAEA;
+	margin: 3% 0%;
+}
+
+
+
+.headingtext{ font-family: "Assistant"; font-size: 30px; font-weight: 700}
+.subheadingtext{ font-family: "Assistant"; font-size: 17px;font-weight: 500}
+.smallheadingtext{ font-family: "Assistant"; font-size: 12px;font-weight: 300}
+}
+
+@media screen and (max-width: 375px) {
+	
+	.gradient-bg {margin: 3% 0%;}
+}
+
+@media screen and (max-width: 320px) {
+	
+	.gradient-bg {margin: 3% 0%;}
+}
+
+	

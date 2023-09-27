@@ -41,10 +41,16 @@
 		$token = $_POST['token'];
 
 		$check_token  = mysqli_query($conn,"select * from booking_track where token ='$token'");
+		$check_phone  = mysqli_query($conn,"select * from booking_track where phone ='$phone'");
 		if(mysqli_num_rows($check_token) > 0) {
 			$error = "על פי נתוני המערכת מספר סלולרי זה כבררשום";
 			echo json_encode(array("success"=>0, "msg"=>$error));
-		}else{
+		}
+		else if (mysqli_num_rows($check_phone) > 0){
+			$error = "על פי נתוני המערכת מספר סלולרי זה כבררשום";
+			echo json_encode(array("success"=>0, "msg"=>$error));
+		}
+		else{
 			$unique_id = $_POST['site'];
 			$first_name = mysqli_escape_string($conn,$_POST['first_name']);
 			$last_name = mysqli_escape_string($conn,$_POST['last_name']);
@@ -53,10 +59,9 @@
 			$event_query = mysqli_query($conn,"select * from events where unique_id = '$unique_id'");
 			$row = mysqli_fetch_assoc($event_query);
 			$event_id = $row['event_id'];
-			$number_of_people = intval($_POST['number_of_people']);
-
+			$number_of_people = $_POST['number_of_people'];
 			
-			$k = "INSERT INTO `booking_track`(`event_id`,`first_name`, `last_name`, `residence`, `phone`,`email_address`, `number_of_people`, `token`, `site`) VALUES ($event_id,'$first_name','$last_name','$residence','$phone','$mail',$number_of_people,'$token','$unique_id')";
+			$k = "INSERT INTO `booking_track`(`event_id`,`first_name`, `last_name`, `residence`, `phone`,`email_address`, `number_of_people`, `token`, `site`) VALUES ($event_id,'$first_name','$last_name','$residence','$phone','$mail','$number_of_people','$token','$unique_id')";
 			$subject = "אישור רישום לאירוע צפרתון 2023";
 			$message  = "<p style='direction:rtl'>הרישום לאירוע הצפרתון הושלם בהצלחה, הנך מוזמן לבקר באירוע <br/> המשך יום מהנה! <br/> בברכה קק”ל</p>";
 

@@ -2,7 +2,7 @@
     include 'includes/header.php';
 ?>
 
-            <div class="content-page">
+            <div class="content-page" style="direction:rtl;">
                 <!-- Start content -->
                 <div class="content">
                     <div class="container">
@@ -21,7 +21,7 @@
                                                                         <div class="mini-stat clearfix bx-shadow bg-white">
                                                                             <div class="mini-stat-info text-right text-dark">
                                                                              <span class="counter text-dark">'.$counter.'</span>
-                                                                                    <a href="registerations_records.php">Total Registerations</a>
+                                                                                    <a href="registerations_records.php">סה”כ נרשמים</a>
                                                                             </div>
                                                                         </div></div>';
 
@@ -31,7 +31,7 @@
                                                                         <div class="mini-stat clearfix bx-shadow bg-white">
                                                                             <div class="mini-stat-info text-right text-dark">
                                                                              <span class="counter text-dark">'.$counter.'</span>
-                                                                                    <a href="registerations_records.php">Total Registerations without Answer Submission</a>
+                                                                                    <a href="registerations_records.php">סה”כ נרשמים שטרם ענו על תשובה</a>
                                                                             </div>
                                                                         </div></div>';
 
@@ -42,7 +42,7 @@
                                                                         <div class="mini-stat clearfix bx-shadow bg-white">
                                                                             <div class="mini-stat-info text-right text-dark">
                                                                              <span class="counter text-dark">'.$counter.'</span>
-                                                                                    <a href="registerations_records.php">Total Registerations with Answer Submission</a>
+                                                                                    <a href="registerations_records.php">סה”כ נרשמים ששלחו תשובה</a>
                                                                             </div>
                                                                         </div></div>';
 
@@ -57,14 +57,14 @@
 
                             $events_query = mysqli_query($conn,"select * from events");
                             $num = 0;
-                            echo '<table class="table table-bordered text-center" style="    background: white; " id="info_table">
+                            echo '<table class="table table-bordered text-center" style="    background: white;direction:rtl; " id="info_table">
 
                                     <thead>
-                                        <th>#</th>
-                                        <th>Event Name</th>
-                                        <th>סה”כ נרשמים</th>
-                                        <th>סה”כ נרשמים ששלחו תשובה</th>
-                                        <th>Page Link</th>
+                                        <th style="direction:rtl;">#</th>
+                                        <th style="direction:rtl;">שם אירוע</th>
+                                        <th style="direction:rtl;">סה”כ נרשמים</th>
+                                        <th style="direction:rtl;">סה”כ נרשמים ששלחו תשובה</th>
+                                        <th style="direction:rtl;">Page Link</th>
                                     </thead> <tbody>';
                             while($event_row = mysqli_fetch_array($events_query)){
                                 $event_id = $event_row['event_id'];
@@ -81,11 +81,11 @@
 
                                    
                                         <tr>
-                                            <td>'.$num.'</td>
-                                            <td>'.$event_name.'</td>
-                                            <td class="counter">'.$query1_row["total_count_without_ans"].'</td>
-                                           <td class="counter">'.$query2_row["total_count_with_ans"].'</td>
-                                           <td>'.$view_events_.'</td>
+                                            <td style="direction:rtl;">'.$num.'</td>
+                                            <td style="direction:rtl;">'.$event_name.'</td>
+                                            <td class="counter" style="direction:rtl;">'.$query1_row["total_count_without_ans"].'</td>
+                                           <td class="counter" style="direction:rtl;">'.$query2_row["total_count_with_ans"].'</td>
+                                           <td style="direction:rtl;"> '.$view_events_.'</td>
                                         </tr>
                                     ';
 
@@ -155,7 +155,7 @@
                 },
                 'dataType':'JSON',
                 success:function(data){
-                    if (data['success']!https://github.com/alicerommi/event-kkl-system.git=1){
+                    if (data['success']!=1){
                         Swal.fire({
                           icon: 'error',
                           title: '',
@@ -171,6 +171,8 @@
                                showConfirmButton: false, // Hide the "OK" button
                                timer: 10000, // 10 seconds in milliseconds
                           });
+                        location.reload();
+
                     }
                 }
             });

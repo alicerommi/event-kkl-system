@@ -139,28 +139,47 @@
                         <option value="6">6</option>
                         <option value="7">7</option>
                         <option value="8">8</option>
+                        <option value="8+">8+</option>
                        
                  </select>
               </div>
-              <div class="col-12 mb-4">
+
+
+
+              <div class="col-12 mb-4" style="direction:rtl; margin-top:0px;">
                 <label for="policy" class="lead mb-2 subheadingtext">
-                 <input type="checkbox" name="policy_confirm" id="policy_confirm">  ואני מסכים לתנאיו
+                 <input type="checkbox" class="policy_confirm" name="policy_confirm" id="policy_confirm">  
+                 קראתי את תנאי
                               <a href="https://kkl-buzz.co.il/assets/files/1.docx" target="_blank" class="text-dark text-decoration-underline">
-                    ולמדיניות השימוש והפרטיות
+                    השימוש והפרטיות
                               </a>
                       ואני מסכים לתנאיו
-                      <a href="https://kkl-buzz.co.il/assets/files/2.docx" target="_blank" class="text-dark text-decoration-underline">
-                    ולמדיניות השימוש והפרטיות
-                              </a>
+                </label> 
+
+                אני מאשר משלוח ידע לגבי פעילות קק”ל
+        
+              </div>
+
+
+                <div class="col-12 mb-4" style="direction:rtl; margin-top:0px;">
+                <label for="policy" class="lead mb-2 subheadingtext">
+                 <input type="checkbox"  class="policy_confirm" name="policy_confirm2" id="policy_confirm2">  
+                  אני מאשר משלוח ידע לגבי פעילות קק”ל
                 </label> 
         
               </div>
+
+
+
+
+
+
             </div>
         <div class="col-md-12">
                 <button class="btn btn-primary btn-lg w-100 py-3 fs-4 rounded-0 disabled-button" id="action_btn"  type="submit">
                   שלח
                 </button>
-              </div>
+        </div>
           </form>
         </div>';
         }else{
@@ -178,6 +197,13 @@
     <script src="assets/js/custom.js" type="application/javascript"></script> 
   <!-- bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://www.negishim.com/accessibility/accessibility_pro_group255.js" type="text/javascript"></script>
+<script type="text/javascript">
+        accessibility_rtl = true;
+        pixel_from_side = 20;
+        pixel_from_start=20;
+</script>
 	</div>
 </body>
 </html>

@@ -93,5 +93,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
    <script src="assets/js/custom.js" type="application/javascript"></script> 
+   <script src="https://www.negishim.com/accessibility/accessibility_pro_group255.js" type="text/javascript"></script>
+<script type="text/javascript">
+        accessibility_rtl = true;
+        pixel_from_side = 20;
+        pixel_from_start=20;
+</script>
 </body>
 </html>
